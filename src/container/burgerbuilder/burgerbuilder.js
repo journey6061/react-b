@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 //import classes from 'burgerbuilder.css'; 
 import Burger from '../../component/burger/burger';
 import Burgercontrols from '../../component/burger/burgercontrols/burgercontrols';
+import Checkbutton from '../../component/burger/checkbutton';
 import Price from '../../component/burger/price'
 
 const price={
@@ -17,7 +18,8 @@ class burgerbuilder extends Component {
             custom2:0,
             custom3:0,
         },
-        baseprice:4
+        baseprice:4,
+        //checkout:false,
     }
 
     
@@ -50,17 +52,28 @@ class burgerbuilder extends Component {
             }
         }
 
+   /*  getChildrenMsg = (result, msg) => {
+        // console.log(result, msg)
+        // 很奇怪这里的result就是子组件那bind的第一个参数this，msg是第二个参数
+        this.setState({
+            checkout: msg
+        })
+    } */
+
     render(){
         return(
             <>
 {/*             <Price customprice={this.state.baseprice} />
- */}            <Burger ingra={this.state.ingradience}/>
+ */}            
+            
+            <Burger ingra={this.state.ingradience}/>
             <Burgercontrols 
             addmethod={this.addingradient}
             removemethod={this.removeingradient}
             price={this.state.baseprice}
             />
-            </>
+{/*             <Checkbutton check={this.state.checkout}/>
+ */}            </>
         );
     }
 }

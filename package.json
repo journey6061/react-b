@@ -1,8 +1,8 @@
 {
   "name": "burger",
   "version": "0.1.0",
-  "private": true,
   "homepage": "https://journey6061.github.io/react-b",
+  "private": true,
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
@@ -13,7 +13,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,5 +31,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }

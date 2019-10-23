@@ -1,23 +1,10 @@
-import React,{Component} from 'react';
+import React, { useState } from 'react';
 import Burgeringra from './burgeringra/burgeringra';
 
-/* class burger extends Component{
-    render(){
-        return(
-            <div>
-            <Burgeringra type="test1"/>
-            <Burgeringra type="custom1"/> 
-            <Burgeringra type="custom2"/> 
-            <Burgeringra type="custom3"/> 
-            <Burgeringra type="test2"/>
-                  
-            </div>
-        );
-    }
-
-} */
-
-const burger=(props)=>{
+const Burger=(props)=>{
+    //const [check, setCheck]=useState(false);
+    const [count, setCount] = useState(0);
+    const [check, setCheck] = useState(true);
     let emptyinfo=null;
     const countingradience=Object.keys(props.ingra)
     .map(aa=>
@@ -35,6 +22,14 @@ const burger=(props)=>{
     console.log(countingradience);
     if(countingradience.length===0){
         emptyinfo=<p>please input ingradient</p>
+    }
+    else{
+        //props.parent.getChildrenMsg(this, true);
+        //setCheck(check=false);
+        //this.setState({check:false})
+        //check=true;
+        //() => {return setCheck(check=false)};
+        setCheck({ check }=false);
     }
     /* {
         for(let i=0; i<props.ingra[aa];i++){
@@ -56,7 +51,10 @@ const burger=(props)=>{
     console.log(customfood);
     */
     
-
+    /* const toParent = (props) => {
+    // console.log(this.props.parent.getChildrenMsg.bind(this, this.state.msg))
+        props.parent.getChildrenMsg(this, this.state.msg)
+    }  */
     
         
     return (
@@ -72,6 +70,13 @@ const burger=(props)=>{
         {emptyinfo}
         
         <Burgeringra type='test2'/>
+
+        <button disabled={check}>testtttttt!</button>
+        {/* <button disabled={check}>Check Out</button> */}
+        <p>You clicked {count} times</p>
+        <button onClick={() => setCount(count+1)}>
+    Click me
+  </button>
         </div>
     )
     /* (ingra,index)=>{
@@ -82,4 +87,4 @@ const burger=(props)=>{
     
 };
 
-export default burger;
+export default Burger;
