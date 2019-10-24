@@ -6,7 +6,7 @@ const Burger=(props)=>{
     // const [count, setCount] = useState(0);
     //const [check, setCheck] = useState(true);
     let emptyinfo=null;
-    let test1=null;
+    let checkbtn=null;
 
     const countingradience=Object.keys(props.ingra)
     .map(aa=>
@@ -25,7 +25,7 @@ const Burger=(props)=>{
     if(countingradience.length===0){
         emptyinfo=<p>please input ingradient</p>
         //setCheck(true);
-        test1=true;
+        checkbtn=true;
 
     }
     else{
@@ -35,7 +35,7 @@ const Burger=(props)=>{
         //check=true;
         //() => {return setCheck(check=false)};
         //setCheck({ check }=false);
-        test1=false;
+        checkbtn=false;
     }
     /* {
         for(let i=0; i<props.ingra[aa];i++){
@@ -77,7 +77,7 @@ const Burger=(props)=>{
         
         <Burgeringra type='test2'/>
 
-        <button disabled={test1}>testtttttt!</button>
+        <button disabled={checkbtn} onClick={props.buy}>testtttttt!</button>
         {/* <button disabled={check}>Check Out</button> */}
         {/* <p>You clicked {count} times</p>
         <button onClick={() => setCount(count+1)}>

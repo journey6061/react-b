@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 //import classes from 'burgerbuilder.css'; 
 import Burger from '../../component/burger/burger';
 import Burgercontrols from '../../component/burger/burgercontrols/burgercontrols';
+import UI from '../../component/UI/ui';
+import Ordersummery from '../../component/burger/ordersummery';
+import Backdrop from '../../component/UI/backdrop';
 import Checkbutton from '../../component/burger/checkbutton';
 import Price from '../../component/burger/price'
 
@@ -19,6 +22,7 @@ class burgerbuilder extends Component {
             custom3:0,
         },
         baseprice:4,
+        purchasing:false,
         //checkout:false,
     }
 
@@ -51,6 +55,13 @@ class burgerbuilder extends Component {
         this.setState({ingradience:newcustomised, baseprice:newamount});
             }
         }
+    purchasable=()=>{
+        this.setState({purchasing:true})
+    }
+
+    hiddencheck=()=>{
+        this.setState({purchasing:false})
+    }
 
    /*  getChildrenMsg = (result, msg) => {
         // console.log(result, msg)
@@ -66,7 +77,11 @@ class burgerbuilder extends Component {
 {/*             <Price customprice={this.state.baseprice} />
  */}            
             
-            <Burger ingra={this.state.ingradience}/>
+            <Burger ingra={this.state.ingradience} buy={this.purchasable}/>
+            <Backdrop show={this.state.purchasing} hidden={this.hiddencheck}/>
+            <UI show={this.state.purchasing}>
+                <Ordersummery ingra={this.state.ingradience} />
+            </UI>
             <Burgercontrols 
             addmethod={this.addingradient}
             removemethod={this.removeingradient}
