@@ -5,6 +5,7 @@ import Burgercontrols from '../../component/burger/burgercontrols/burgercontrols
 import UI from '../../component/UI/ui';
 import Ordersummery from '../../component/burger/ordersummery';
 import Backdrop from '../../component/UI/backdrop';
+import Button from '../../component/UI/button/button'
 import Checkbutton from '../../component/burger/checkbutton';
 import Price from '../../component/burger/price'
 
@@ -63,6 +64,10 @@ class burgerbuilder extends Component {
         this.setState({purchasing:false})
     }
 
+    continuealert=()=>{
+        alert('continue yes')
+    }
+
    /*  getChildrenMsg = (result, msg) => {
         // console.log(result, msg)
         // 很奇怪这里的result就是子组件那bind的第一个参数this，msg是第二个参数
@@ -81,6 +86,8 @@ class burgerbuilder extends Component {
             <Backdrop show={this.state.purchasing} hidden={this.hiddencheck}/>
             <UI show={this.state.purchasing}>
                 <Ordersummery ingra={this.state.ingradience} />
+                <Button type='Success' clicked={this.continuealert}>continue</Button>
+                <Button type='Danger' clicked={this.hiddencheck}>cancel</Button>
             </UI>
             <Burgercontrols 
             addmethod={this.addingradient}
