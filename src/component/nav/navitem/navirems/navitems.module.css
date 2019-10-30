@@ -1,0 +1,24 @@
+.Items{
+       width: 50%;
+       margin: 0;
+       display: flex;
+       height: 100%;
+       align-items: center;
+       float: left;
+    }
+    
+    .Items a{
+        color: white;
+        text-decoration: none;
+        height: 100%;
+        border-bottom: 2px solid transparent;
+        box-sizing: border-box;
+        display: block
+     }
+     .Items a:hover,
+     .Items a:active,
+     .Items a.active{
+         background: greenyellow;
+         color: black;
+     }
+    

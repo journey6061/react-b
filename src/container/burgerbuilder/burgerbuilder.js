@@ -5,7 +5,7 @@ import Burgercontrols from '../../component/burger/burgercontrols/burgercontrols
 import UI from '../../component/UI/ui';
 import Ordersummery from '../../component/burger/ordersummery';
 import Backdrop from '../../component/UI/backdrop';
-import Button from '../../component/UI/button/button'
+import Button from '../../component/UI/button/button';
 import Checkbutton from '../../component/burger/checkbutton';
 import Price from '../../component/burger/price'
 
@@ -81,7 +81,6 @@ class burgerbuilder extends Component {
             <>
 {/*             <Price customprice={this.state.baseprice} />
  */}            
-            
             <Burger ingra={this.state.ingradience} buy={this.purchasable}/>
             <Backdrop show={this.state.purchasing} hidden={this.hiddencheck}/>
             <UI show={this.state.purchasing}>
