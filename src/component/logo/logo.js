@@ -4,9 +4,9 @@ import logoDir from './burger-logo.png';
 //import classes from './layout.module.css';
 
 
-const logo =()=>{
+const logo =(props)=>{
     return(
-        <div className={classeslogo.Logo}>
+        <div className={classeslogo.Logo} style={{textAlign:props.tAlign}}>
             <img src={logoDir} alt='logo'/>
         </div>
     )

@@ -10,7 +10,7 @@ const toolbar=()=>{
                 menu
             </div>
             <div className={classes.Logo}>
-                <Logo />
+                <Logo tAlign='center'/>
             </div>
             <div className={classes.Navitem}>
                 <Navitem />

@@ -1,0 +1,83 @@
+.Drawbar{
+    width: 200px;
+    max-width: 80%;
+    padding: 20px;
+    margin: 0;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    height: 100%;
+    transition: transform, 2s, ease-out;
+    background: powderblue;
+    z-index: 200;
+
+}
+.Navi {
+    margin: 0;
+    display: flex;
+    /* height: 100%; */
+    width: auto;
+    align-items: center;
+    /* background: yellow !important;
+    font-size: 6rem !important */
+}
+
+.Navi li {
+    width: 100%;
+    
+}
+
+.Navi a {
+    color: white;
+    height: 100%;
+    padding: 16px 10px;
+    border-bottom: 4px solid transparent;
+}
+
+.Navi a:hover,
+.Navi a:active,
+.Navi a.active {
+    background: greenyellow;
+     color: black;
+}
+@media(min-width:500px){
+    .Drawbar{
+    display: none;
+    }
+}
+
+.Open{
+    transform: translate3d(200px,0,0);
+}
+
+.Close{
+    transform: translate3d(-200px,0,0);
+
+}
+
+/* @media (min-width: 500px) {
+    .Navi {
+        margin: 0;
+        display: flex;
+        height: 100%;
+        width: auto;
+        align-items: center;
+        background: yellow !important;
+        font-size: 6rem !important
+    }
+    
+    .Navi a {
+        color: white;
+        height: 100%;
+        padding: 16px 10px;
+        border-bottom: 4px solid transparent;
+    }
+    
+    .Navi a:hover,
+    .Navi a:active,
+    .Navi a.active {
+        background-color: #8F5C2C;
+        border-bottom: 4px solid #40A4C8;
+        color: white;
+    }
+} */
