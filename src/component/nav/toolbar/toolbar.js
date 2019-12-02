@@ -1,12 +1,13 @@
 import React from 'react';
 import classes from './toolbar.module.css';
 import Logo from '../../logo/logo';
-import Navitem from '../navitem/navitem'
+import Navitem from '../navitem/navitem';
+//import Drawbar from '../drawbar/drawbar';
 
-const toolbar=()=>{
+const toolbar=(props)=>{
     return(
         <div className={classes.Toolbar}>
-            <div className={classes.Menu}>
+            <div className={classes.Menu} onClick={props.drawshow}>
                 menu
             </div>
             <div className={classes.Logo}>

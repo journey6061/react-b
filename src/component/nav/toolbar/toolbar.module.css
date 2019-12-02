@@ -18,10 +18,11 @@
     float: left;
     display: inline-block;
     cursor: pointer;
+    display: none;
 }
 
 .Toolbar .Logo{
-    width: 70%;
+    width: 80%;
     text-align: center;
     display: inline-block;
     float: left;
@@ -32,4 +33,17 @@
     text-align: center;
     display: inline-block;
     float: left;
+}
+
+@media(max-width:500px){
+    .Toolbar .Navitem{
+        display: none;
+    }
+    .Toolbar .Menu{
+        display: block;
+    }
+    .Toolbar .Logo{
+        width: 90%;
+    }
+
 }

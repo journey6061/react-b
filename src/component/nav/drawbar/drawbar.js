@@ -4,7 +4,7 @@ import classes from './drawbar.module.css';
 import Navitem from '../navitem/navitem';
 import Backdrop from '../../UI/backdrop';
 
-class drawbar extends Component{
+/* class drawbar extends Component{
     state={
         drawbardis:true,
     }
@@ -26,7 +26,7 @@ class drawbar extends Component{
             </>
         )
     }
-}
+} */
 
 /* 
 const drawbar =(props)=>{
@@ -42,5 +42,19 @@ const drawbar =(props)=>{
         </>
     )
 } */
+
+const drawbar =(props)=>{
+    return(
+        <>
+        <Backdrop show={props.drawbardis} hidden={props.disdraw}/>
+        <div className={classes.Drawbar} style={{display:props.drawbardis?'block':'none'}}>
+        <Logo tAlign='center'/>
+        <nav className={classes.Navi}>
+            <Navitem />
+        </nav>
+        </div>
+        </>
+    )
+}
 
 export default drawbar;

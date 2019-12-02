@@ -3,7 +3,6 @@
     border: none;
     color: white;
     outline: none;
-    cursor: pointer;
     font: inherit;
     padding: 10px;
     height: 50px;
@@ -13,6 +12,6 @@
  */}
 
  .Logo img{
-    
+    cursor: pointer;
     height: 30px;
     }

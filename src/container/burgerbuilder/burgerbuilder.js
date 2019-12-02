@@ -6,6 +6,7 @@ import UI from '../../component/UI/ui';
 import Ordersummery from '../../component/burger/ordersummery';
 import Backdrop from '../../component/UI/backdrop';
 import Button from '../../component/UI/button/button';
+import axios from '../../a_order';
 import Checkbutton from '../../component/burger/checkbutton';
 import Price from '../../component/burger/price'
 
@@ -65,7 +66,16 @@ class burgerbuilder extends Component {
     }
 
     continuealert=()=>{
-        alert('continue yes')
+        //alert('continue yes')
+        const order={
+            ingradience:this.state.ingradience,
+            baseprice:this.state.baseprice,
+            testname:'mine'
+        }
+        axios.post('/ordertest.json', order)
+        .then((response)=>console.log(response))
+        .catch((error)=>console.log(error));
+
     }
 
    /*  getChildrenMsg = (result, msg) => {
